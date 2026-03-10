@@ -3,26 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tedse Engenharia Elétrica</title>
+    <title>TEDSE Engenharia Elétrica - Santos/SP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; padding: 50px; background-color: #f8f9fa; margin: 0; }
-        .container { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 700px; margin: auto; border-top: 8px solid #004a99; }
-        img { max-width: 180px; margin-bottom: 20px; }
-        h1 { color: #004a99; margin-bottom: 10px; font-size: 28px; }
-        p { color: #333; font-size: 1.1em; line-height: 1.6; }
-        .servicos { color: #666; font-style: italic; margin: 20px 0; }
-        .btn { display: inline-block; padding: 18px 30px; background-color: #25d366; color: white; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.1em; transition: 0.3s; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
-        .btn:hover { background-color: #128c7e; transform: scale(1.05); }
+        :root {
+            --primary: #004a99;
+            --secondary: #002d5f;
+            --accent: #f39c12;
+            --light: #f8f9fa;
+            --dark: #1a1a1a;
+        }
+        
+        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; color: #333; line-height: 1.6; background-color: var(--light); }
+        
+        header { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        header img { height: 60px; }
+        
+        .hero { background: linear-gradient(rgba(0,45,95,0.85), rgba(0,45,95,0.85)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80'); 
+                background-size: cover; background-position: center; color: white; padding: 100px 5%; text-align: center; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px; opacity: 0.9; }
+
+        .container { padding: 60px 5%; max-width: 1200px; margin: auto; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { color: var(--secondary); font-size: 2.2rem; margin-bottom: 10px; }
+        .section-title::after { content: ''; width: 80px; height: 4px; background: var(--accent); display: block; margin: 0 auto; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-bottom: 5px solid transparent; transition: 0.3s; text-align: center; }
+        .service-card:hover { transform: translateY(-10px); border-color: var(--accent); }
+        .service-card i { font-size: 40px; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { color: var(--secondary); margin-bottom: 15px; }
+
+        .cta-btn { display: inline-block; background: #25d366; color: white; padding: 18px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 4px 15px rgba(37,211,102,0.4); }
+        .cta-btn:hover { background: #128c7e; transform: scale(1.05); }
+
+        footer { background: var(--dark); color: white; padding: 40px 5%; text-align: center; margin-top: 60px; }
+        .footer-info { margin-bottom: 20px; opacity: 0.8; }
+        
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="logo.png" alt="Tedse Engenharia">
-        <h1>Tedse Engenharia Elétrica</h1>
-        <p>Soluções completas em engenharia elétrica, adequações NR10 e NR12, e manutenção industrial em Santos e toda a Baixada Santista.</p>
-        <p class="servicos">Projetos • Laudos • SPDA • Painéis Elétricos</p>
-        <p>Estamos preparando um novo site para você. Enquanto isso, entre em contato direto pelo WhatsApp:</p>
-        <a href="https://wa.me/5513997927969" class="btn">Solicitar Orçamento via WhatsApp</a>
+
+<header>
+    <img src="logo.png" alt="TEDSE Engenharia">
+    <div style="font-weight: bold; color: var(--primary);"><i class="fas fa-phone"></i> (13) 99792-7969</div>
+</header>
+
+<section class="hero">
+    <h1>TEDSE Engenharia Elétrica</h1>
+    <p>Excelência Técnica e Segurança em Instalações Industriais e Comerciais. 18 anos de experiência servindo a Baixada Santista.</p>
+    <a href="https://wa.me/5513997927969" class="cta-btn"><i class="fab fa-whatsapp"></i> Solicitar Orçamento Gratuito</a>
+</section>
+
+<div class="container">
+    <div class="section-title">
+        <h2>Nossos Serviços</h2>
+        <p>Soluções especializadas com foco em normas técnicas e eficiência.</p>
     </div>
+
+    <div class="services-grid">
+        <div class="service-card">
+            <i class="fas fa-file-contract"></i>
+            <h3>Laudos e Adequações</h3>
+            <p>Adequação técnica rigorosa às normas NR10, NR12, NR33 e NR35.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Projetos e SPDA</h3>
+            <p>Sistemas de Proteção contra Descargas Atmosféricas e projetos elétricos completos.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-industry"></i>
+            <h3>Manutenção Industrial</h3>
+            <p>Montagem de painéis, infraestrutura elétrica e manutenção preventiva/corretiva.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-info">
+        <p><strong>TEDSE Engenharia Elétrica</strong></p>
+        <p>Atendimento em Santos e toda Baixada Santista</p>
+        <p><i class="fas fa-envelope"></i> contato@tedse.com.br | <i class="fas fa-phone"></i> (13) 99792-7969</p>
+    </div>
+    <div style="font-size: 0.8rem; opacity: 0.5;">
+        &copy; 2026 TEDSE Engenharia. Todos os direitos reservados.
+    </div>
+</footer>
+
 </body>
 </html>
