@@ -6,14 +6,14 @@
     <title>TEDSE Engenharia - Técnica em Diagnóstico para Segurança Elétrica</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Variáveis de Cor Profissionais (Dark Mode Premium) */
+        /* Variáveis de Cor Profissionais (Dark Mode Leve) */
         :root {
-            --primary: #101010; /* Fundo Principal Quase Preto */
-            --secondary: #1a1a1a; /* Fundo Secundário (Cabeçalho/Rodapé) */
-            --accent: #f39c12; /* Dourado Acetinado da Identidade Visual */
+            --primary: #1c1c1c; /* Fundo Principal Cinza Escuro Suave */
+            --secondary: #262626; /* Fundo Secundário (Cabeçalho/Rodapé) */
+            --accent: #f39c12; /* Dourado Acetinado da Logo */
             --text-main: #f8f9fa; /* Texto Principal Leve */
             --text-secondary: #aaaaaa; /* Texto Secundário Leve */
-            --text-highlight: #ffffff; /* Texto em Destaque Branco puro */
+            --text-highlight: #ffffff; /* Texto em Destaque Branco */
             --blue-light: #004a99; /* Azul Claro da Identidade Visual */
         }
         
@@ -22,10 +22,10 @@
             margin: 0; 
             color: var(--text-main); 
             line-height: 1.6; 
-            background-color: var(--primary); /* Fundo Escuro */
+            background-color: var(--primary); /* Fundo Escuro Suave */
         }
         
-        /* === Estilo do Cabeçalho - DARK MODE (Sem Logo) === */
+        /* === Estilo do Cabeçalho - DARK MODE LEVE (Sem Logo) === */
         header { 
             background: var(--secondary); /* Fundo Secundário Dark */
             padding: 1rem 5%; 
@@ -45,7 +45,7 @@
             font-size: 1.1em; 
             display: flex;
             align-items: center;
-            gap: 30px; /* Espaço entre o ícone e o texto, e entre telefone e e-mail */
+            gap: 20px; /* Espaço entre o ícone e o texto, e entre telefone e e-mail */
         }
         header .contact-info div {
             display: flex;
@@ -56,10 +56,9 @@
             color: var(--accent); /* Ícone Dourado */
         }
         
-        /* === Banner Principal ESTILO OUTDOOR - DARK MODE === */
+        /* === Banner Principal ESTILO OUTDOOR - DARK MODE LEVE === */
         .hero { 
-            /* Gradiente escuro para garantir leitura do texto branco */
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('manutencao-condominio.jpg'); 
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url('hero-bg.jpg'); 
             background-size: cover; 
             background-position: center; 
             background-attachment: fixed; /* Efeito Parallax profissional */
@@ -118,8 +117,8 @@
         .section-title p { color: var(--text-secondary); }
         .section-title::after { content: ''; width: 120px; height: 6px; background: var(--accent); display: block; margin: 0 auto; border-radius: 3px; }
 
-        /* Grid de Especialidades - DARK MODE */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px; }
+        /* Grid de Especialidades - DARK MODE LEVE */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 50px; }
         
         .service-card { 
             background: var(--secondary); /* Fundo Secundário Dark */
@@ -127,12 +126,12 @@
             overflow: hidden; 
             box-shadow: 0 15px 40px rgba(0,0,0,0.5); 
             transition: 0.4s ease; 
-            border-bottom: 8px solid transparent; 
+            border-bottom: 6px solid transparent; 
         }
         .service-card:hover { transform: translateY(-15px); box-shadow: 0 25px 50px rgba(0,0,0,0.7); border-color: var(--accent); }
         
-        /* Imagens dos Serviços - Usando as fotos técnicas que você tem no repositório */
-        .service-card img { width: 100%; height: 280px; object-fit: cover; opacity: 0.9; /* Diminui levemente a intensidade */ }
+        /* Imagens dos Serviços */
+        .service-card img { width: 100%; height: 250px; object-fit: cover; opacity: 0.8; /* Diminui a intensidade das imagens no dark mode */ }
         
         .service-content { padding: 40px; text-align: center; }
         .service-content i { font-size: 50px; color: var(--accent); margin-bottom: 25px; display: block; }
@@ -141,34 +140,27 @@
 
         /* Rodapé Profissional Dark */
         footer { background: var(--secondary); color: var(--text-main); padding: 80px 5%; text-align: center; margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.05); }
-        .footer-info { margin-bottom: 50px; opacity: 0.9; }
-        .footer-info p { margin: 15px 0; font-size: 1.2em; }
+        .footer-info { margin-bottom: 40px; opacity: 0.9; }
+        .footer-info p { margin: 12px 0; font-size: 1.2em; }
         .footer-info i { color: var(--accent); margin-right: 12px; }
         
-        /* Estilo para a Seção de E-mails no Rodapé Dark */
+        /* Estilo para os E-mails no Rodapé Dark */
         footer .emails-info { 
-            margin-top: 40px; 
+            margin-top: 30px; 
             display: flex;
             flex-direction: column;
-            gap: 20px; /* Espaço entre os e-mails */
-            align-items: center; /* Centraliza os e-mails horizontalmente */
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 40px;
+            gap: 15px; /* Espaço entre os e-mails */
+            align-items: center; /* Centraliza os e-mails verticalmente */
         }
         footer .emails-info div {
             display: flex;
             align-items: center;
-            gap: 12px; /* Espaço entre o ícone e o e-mail */
-            font-size: 1.1em;
-        }
-        footer .emails-info i {
-            color: var(--accent); /* Ícone Dourado */
+            gap: 10px; /* Espaço entre o ícone e o e-mail */
         }
         footer .emails-info a {
             color: var(--blue-light); /* Cor azul clara para os links sobre fundo escuro */
             text-decoration: none; /* Remove sublinhado */
             transition: 0.3s;
-            font-weight: bold;
         }
         footer .emails-info a:hover {
             color: var(--accent); /* Cor dourada ao passar o mouse */
@@ -180,7 +172,7 @@
         /* Responsividade para Celulares */
         @media (max-width: 768px) { 
             .hero { padding: 120px 5%; min-height: 60vh; }
-            .hero h1 { font-size: 2.3rem; letter-spacing: 2px; }
+            .hero h1 { font-size: 2.2rem; letter-spacing: 2px; }
             .hero p { font-size: 1.1em; }
             .cta-btn { padding: 18px 35px; font-size: 1.1rem; }
             .section-title h2 { font-size: 2.2rem; }
@@ -206,26 +198,35 @@
 
 <div class="container">
     <div class="section-title">
-        <h2>Especialidades TEDSE</h2>
+        <h2>Nossas Especialidades</h2>
         <p>Técnica em Engenharia de Diagnóstico para Segurança Elétrica. Rigor técnico e conformidade absoluta.</p>
     </div>
 
     <div class="services-grid">
         <div class="service-card">
-            <img src="servico-nr10.jpg" alt="Laudos NR10 e NR12 - TEDSE Engenharia">
+            <img src="https://images.unsplash.com/photo-1581093583449-84d189f88a1b?auto=format&fit=crop&q=80&w=800" alt="Adequação NR10/NR12">
             <div class="service-content">
-                <i class="fas fa-shield-alt"></i>
+                <i class="fas fa-file-contract"></i>
                 <h3>Laudos e Adequações</h3>
-                <p>Análise técnica detalhada e execução de adequações para normas NR10, NR12 e Segurança Elétrica predial/industrial.</p>
+                <p>Análise detalhada e adequação rigorosa às normas NR10, NR12, NR33 e NR35.</p>
             </div>
         </div>
         
         <div class="service-card">
-            <img src="servico-projetos.jpg" alt="Projetos e SPDA - TEDSE Engenharia">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800" alt="Manutenção Industrial">
+            <div class="service-content">
+                <i class="fas fa-industry"></i>
+                <h3>Manutenção Industrial</h3>
+                <p>Manutenção preventiva e corretiva de subestações e painéis elétricos de potência.</p>
+            </div>
+        </div>
+        
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800" alt="Projetos Elétricos">
             <div class="service-content">
                 <i class="fas fa-bolt"></i>
-                <h3>Projetos e Manutenção</h3>
-                <p>Desenvolvimento de projetos de subestações, sistemas SPDA (para-raios) e manutenção preventiva de painéis de potência.</p>
+                <h3>Projetos e SPDA</h3>
+                <p>Sistemas de Proteção contra Descargas Atmosféricas e projetos elétricos completos.</p>
             </div>
         </div>
     </div>
@@ -243,7 +244,6 @@
             <div><i class="fas fa-envelope"></i> <a href="mailto:eli.ricardo@tedse.com.br">eli.ricardo@tedse.com.br</a></div>
         </div>
     </div>
-    
     <div class="footer-copy">
         &copy; 2026 TEDSE Engenharia. Todos os direitos reservados.
     </div>
